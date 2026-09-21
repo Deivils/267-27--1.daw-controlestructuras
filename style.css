@@ -1,4 +1,91 @@
-body{
-    background-color: blue;
-    color: brown;
+/* Importar una fuente moderna similar a San Francisco de Apple */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+    --bg-color: #1e1e1e;
+    --window-bg: rgba(45, 45, 48, 0.75);
+    --window-border: rgba(255, 255, 255, 0.1);
+    --text-primary: #f5f5f7;
+    --text-secondary: #a1a1a6;
+    --accent-color: #0a84ff;
+    --list-bg: rgba(255, 255, 255, 0.05);
+    --list-hover: rgba(255, 255, 255, 0.08);
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    /* Fondo con un toque sutil estilo macOS */
+    background: linear-gradient(135deg, #2c3e50 0%, #1a1a2e 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--text-primary);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor principal estilo "Ventana de macOS" */
+body > * {
+    background-color: var(--window-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--window-border);
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    width: 400px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* Reorganizamos los elementos dentro del flujo */
+h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--window-border);
+    margin: 15px 0;
+}
+
+h4 {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+}
+
+/* Estilo para la lista de tipos */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+li {
+    background-color: var(--list-bg);
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: all 0.2s ease;
+}
+
+li:hover {
+    background-color: var(--list-hover);
+    transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.1);
 }
